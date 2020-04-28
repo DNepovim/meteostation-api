@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5445:5432
+    environment:
+      - POSTGRES_USER=meteo
+      - POSTGRES_PASSWORD=meteo
+      - POSTGRES_DB=meteo
+    healthcheck:
+      test: "pg_isready -h localhost -p 5432 -q -U postgres"
+      interval: 3s
+      timeout: 5s
+      retries: 5
