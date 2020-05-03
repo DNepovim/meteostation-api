@@ -1,4 +1,14 @@
 import { Client } from "https://deno.land/x/postgres/mod.ts"
-const env = Deno.env()
+import {DB_USER, DB_DATABASE, DB_HOST, DB_PORT, DB_PASSWORD} from "../config.ts"
 
-export const client = new Client(env.DATABASE_URL)
+const DATABASE_URL = Deno.env("DATABASE_URL")
+
+const conf = DATABASE_URL ?? {
+    user: DB_USER,
+    database: DB_DATABASE,
+    host: DB_HOST,
+    port: DB_PORT,
+    password: DB_PASSWORD
+  }
+
+export const client = new Client(conf)
