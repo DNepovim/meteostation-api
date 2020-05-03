@@ -1,4 +1,3 @@
-
 import { client } from "./client.ts"
 
 await client.connect()
@@ -17,5 +16,4 @@ await client.query(`
 
 await client.end()
 
-console.log('Table was succesfuly created.')
-
+console.log("Table was succesfuly created.")
