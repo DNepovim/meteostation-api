@@ -1,4 +1,4 @@
-import { Application } from "https://denopkg.com/Soremwar/oak@v0.41/mod.ts"
+import { Application } from "https://raw.githubusercontent.com/oakserver/oak/master/mod.ts"
 import { APP_HOST, APP_PORT } from "./config.ts"
 import router from "./routing.ts"
 import notFound from "./handlers/notFound.ts"

@@ -1,4 +1,4 @@
-import { Response } from "https://denopkg.com/Soremwar/oak@v0.41/mod.ts"
+import { Response } from "https://raw.githubusercontent.com/oakserver/oak/master/mod.ts"
 
 export default async (
   { response }: { response: Response },

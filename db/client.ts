@@ -1,7 +1,9 @@
-import { Client } from "https://raw.githubusercontent.com/buildondata/deno-postgres/v0.3.10/mod.ts"
+import { Client } from "https://deno.land/x/postgres/mod.ts";
+
+
 import {DB_USER, DB_DATABASE, DB_HOST, DB_PORT, DB_PASSWORD} from "../config.ts"
 
-const DATABASE_URL = Deno.env("DATABASE_URL")
+const DATABASE_URL = Deno.env.get("DATABASE_URL")
 
 const conf = DATABASE_URL ?? {
     user: DB_USER,

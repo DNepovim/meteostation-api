@@ -1,4 +1,4 @@
-import { Request, Response } from "https://denopkg.com/Soremwar/oak@v0.41/mod.ts"
+import { Request, Response} from "https://raw.githubusercontent.com/oakserver/oak/master/mod.ts"
 import { writeMetrics } from "../services/metrics.ts"
 
 export default async ({
